@@ -52,6 +52,7 @@ export interface Solution {
   description: string
   features: string[]
   icon: IconComponent
+  image: string
 }
 
 export const solutions: Solution[] = [
@@ -61,6 +62,7 @@ export const solutions: Solution[] = [
     description: 'Deep analytics platform that transforms raw data into actionable intelligence.',
     features: ['Real-time dashboards', 'Custom ML models', 'Automated reporting'],
     icon: Brain,
+    image: '/solutions/aethermind.svg',
   },
   {
     name: 'AetherShield',
@@ -68,6 +70,7 @@ export const solutions: Solution[] = [
     description: 'Comprehensive security platform protecting your digital infrastructure 24/7.',
     features: ['Threat detection', 'Incident response', 'Compliance automation'],
     icon: Shield,
+    image: '/solutions/aethershield.svg',
   },
   {
     name: 'AetherFlow',
@@ -75,6 +78,7 @@ export const solutions: Solution[] = [
     description: 'Intelligent automation that streamlines operations and eliminates bottlenecks.',
     features: ['Process orchestration', 'Smart routing', 'Integration hub'],
     icon: Zap,
+    image: '/solutions/aetherflow.svg',
   },
 ]
 

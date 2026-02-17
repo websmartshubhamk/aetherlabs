@@ -20,11 +20,16 @@ export function Solutions() {
           {solutions.map((sol) => (
             <div
               key={sol.name}
-              className="rounded-2xl border border-[rgba(16,185,129,0.12)] bg-[rgba(3,20,13,0.6)] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(16,185,129,0.3)]"
+              className="rounded-2xl border border-[rgba(16,185,129,0.12)] bg-[rgba(3,20,13,0.6)] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(16,185,129,0.3)]"
               data-section-item
             >
+              <div className="relative h-40 w-full overflow-hidden">
+                <img src={sol.image} alt={sol.name} className="h-full w-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(3,20,13,0.9)] to-transparent" />
+              </div>
+              <div className="p-8 pt-4">
               <div className="h-1 w-16 rounded-full bg-gradient-to-r from-[#10b981] to-[#14b8a6]" />
-              <sol.icon className="mt-6 h-8 w-8 text-[#10b981]" />
+              <sol.icon className="mt-4 h-8 w-8 text-[#10b981]" />
               <h3 className="mt-4 text-xl font-bold text-[#e8faf3]">{sol.name}</h3>
               <p className="mt-1 text-sm font-medium text-[#14b8a6]">{sol.subtitle}</p>
               <p className="mt-3 text-sm leading-relaxed text-[#e8faf3]/45">{sol.description}</p>
@@ -42,6 +47,7 @@ export function Solutions() {
               >
                 Learn More <ArrowRight className="h-4 w-4" />
               </a>
+              </div>
             </div>
           ))}
         </div>
